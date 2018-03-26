@@ -1,0 +1,10 @@
+html, body {
+  height: 100%;
+  font-size: 10px;
+}
+
+input, button {
+  font-size: 1.6rem;
+  outline: none;
+  border: 0;
+}
