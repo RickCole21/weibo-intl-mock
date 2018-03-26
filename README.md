@@ -1,0 +1,1 @@
+# weibo-intl-mock
