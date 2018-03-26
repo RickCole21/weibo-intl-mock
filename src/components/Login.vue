@@ -122,6 +122,8 @@
     color: #fff;
     font-weight: bold;
     border-radius: 2px;
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s; /* Safari */
   }
 
   .btn button:disabled {
