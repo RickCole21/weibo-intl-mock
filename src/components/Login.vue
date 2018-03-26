@@ -10,12 +10,12 @@
         <i class="icon-clear" v-show="iconClearIsShow">X</i>
       </div>
       <div class="input">
-        <input type="password" placeholder="输入密码">
+        <input type="password" v-model="password" placeholder="输入密码">
         <i class="icon-clear" v-show="iconClearIsShow">X</i>
       </div>
 
       <div class="btn">
-        <button disabled="disabled">登入</button>
+        <button :disabled="btnDisabled">登入</button>
       </div>
 
       <div class="below">
@@ -37,7 +37,14 @@
     data() {
       return {
         username: '',
-        iconClearIsShow: true
+        password: '',
+
+        iconClearIsShow: true,
+      }
+    },
+    computed: {
+      btnDisabled() {
+        return !(this.username && this.password);
       }
     }
   }
@@ -114,6 +121,7 @@
     background-color: coral;
     color: #fff;
     font-weight: bold;
+    border-radius: 2px;
   }
 
   .btn button:disabled {
