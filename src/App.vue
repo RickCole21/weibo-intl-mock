@@ -1,15 +1,29 @@
 <template>
   <div id="app">
     <router-view/>
+
+    <tabbar>
+      <tabbar-item to="/" icon="fa fa-home"></tabbar-item>
+      <tabbar-item to="/discovery" icon="fa fa-globe"></tabbar-item>
+      <tabbar-item to="/message" icon="fa fa-bell"></tabbar-item>
+      <tabbar-item to="/mine" icon="fa fa-user"></tabbar-item>
+    </tabbar>
   </div>
 </template>
 
 <script>
-  import './assets/css/reset.css';
-  import './assets/css/style.css';
+  import './assets/css/reset.css'
+  import './assets/css/style.css'
+
+  import Tabbar from './components/common/tabbar'
+  import TabbarItem from './components/common/tabbar-item'
 
   export default {
-    name: 'App'
+    name: 'App',
+    components: {
+      Tabbar,
+      TabbarItem
+    }
   }
 </script>
 

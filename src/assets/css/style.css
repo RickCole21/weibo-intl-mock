@@ -3,8 +3,17 @@ html, body {
   font-size: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
 input, button {
   font-size: 1.4rem;
   outline: none;
   border: 0;
+}
+
+#app {
+  background-color: #efefef;
 }
