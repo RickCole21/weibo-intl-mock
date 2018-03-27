@@ -5,6 +5,8 @@ import Login from '@/components/Login'
 import Weibo from '@/components/weibo'
 import Mine from '@/components/mine'
 
+import Dev from '@/components/common/weibo-item'
+
 Vue.use(Router);
 
 export default new Router({
@@ -32,6 +34,14 @@ export default new Router({
       component: Mine,
       meta: {
         title: '我的'
+      }
+    },
+    {
+      path: '/dev',
+      name: 'dev',
+      component: Dev,
+      meta: {
+        title: '开发组件'
       }
     }
   ]

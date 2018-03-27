@@ -16,4 +16,8 @@
     text-align: center;
     font-size: 2.2rem;
   }
+
+  a:hover, a:active {
+    background-color: #fff;
+  }
 </style>
