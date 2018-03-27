@@ -4,7 +4,7 @@
 
     <div class="avatar-wrapper">
       <div class="avatar">
-        <img src="../assets/img/avatar.jpg" alt="..."/>
+        <img src="../assets/img/avatar-me.jpg" alt="..."/>
       </div>
       <div class="avatar-info">
         <h4>RickCole</h4>

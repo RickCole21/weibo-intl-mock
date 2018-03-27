@@ -86,6 +86,7 @@
     position: relative;
     height: 100%;
     font-size: 1.6rem;
+    background-color: #fff;
   }
 
   .reg-text {

@@ -14,7 +14,7 @@
     display: table-cell;
     height: 100%;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 
   a:hover, a:active {

@@ -1,7 +1,7 @@
 <template>
   <div class="header-vue">
     <div class="header-left">
-      <img src="../../assets/img/avatar.jpg" alt="...">
+      <img src="../../assets/img/avatar-me.jpg" alt="...">
     </div>
     <span class="title">{{title}}</span>
     <div class="header-right">
@@ -29,8 +29,21 @@
     line-height: 45px;
     font-size: 1.6rem;
     font-weight: bold;
-    border-bottom: 1px solid #d9d9d9;
     background-color: #fff;
+    z-index: 10;
+  }
+
+  .header-vue::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    transform-origin: 0 0;
+    transform: scaleY(.5);
   }
 
   .header-left {
