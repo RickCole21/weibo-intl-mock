@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Login from '@/components/Login'
 import Weibo from '@/components/weibo'
+import Mine from '@/components/mine'
 
 Vue.use(Router);
 
@@ -23,6 +24,14 @@ export default new Router({
       component: Login,
       meta: {
         title: '登录'
+      }
+    },
+    {
+      path: '/mine',
+      name: 'mine',
+      component: Mine,
+      meta: {
+        title: '我的'
       }
     }
   ]

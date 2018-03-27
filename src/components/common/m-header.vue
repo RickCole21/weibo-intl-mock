@@ -13,7 +13,7 @@
 
 <script>
   export default {
-    name: "header",
+    name: "m-header",
     props: ['title']
   }
 </script>
@@ -30,7 +30,7 @@
     font-size: 1.6rem;
     font-weight: bold;
     border-bottom: 1px solid #d9d9d9;
-    background-color: #ffffffd4;
+    background-color: #fff;
   }
 
   .header-left {
@@ -42,8 +42,8 @@
   }
 
   .header-left img {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
   }
 

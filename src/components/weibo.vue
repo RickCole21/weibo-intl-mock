@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import MHeader from './common/header'
+  import MHeader from './common/m-header'
 
   export default {
     name: 'weibo',

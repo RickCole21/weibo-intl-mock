@@ -1,41 +1,47 @@
 <template>
   <div>
-    <div className="avatar-wrapper">
-      <div className="avatar">
+    <m-header title="全部"></m-header>
+
+    <div class="avatar-wrapper">
+      <div class="avatar">
         <img src="../assets/img/avatar.jpg" alt="..."/>
       </div>
-      <div className="avatar-info">
+      <div class="avatar-info">
         <h4>RickCole</h4>
         <p>已消费：345.5$</p>
       </div>
     </div>
 
-    <CellGroup>
-      <Cell icon="fa fa-cog" text="Settings"></Cell>
-    </CellGroup>
+    <!--<CellGroup>-->
+    <!--<Cell icon="fa fa-cog" text="Settings"></Cell>-->
+    <!--</CellGroup>-->
 
-    <CellGroup>
-      <Cell icon="fa fa-moon-o" text="Night Mode"></Cell>
-      <Cell icon="fa fa-star-o" text="Favourites"></Cell>
-      <Cell icon="fa fa-qrcode" text="Scanning QR Code"></Cell>
-      <Cell icon="fa fa-moon-o" text="Drafts"></Cell>
-      <Cell icon="fa fa-hashtag" text="My Topics"></Cell>
-      <Cell icon="fa fa-headphones" text="Help & Support"></Cell>
-    </CellGroup>
-    <Tabbar></Tabbar>
+    <!--<CellGroup>-->
+    <!--<Cell icon="fa fa-moon-o" text="Night Mode"></Cell>-->
+    <!--<Cell icon="fa fa-star-o" text="Favourites"></Cell>-->
+    <!--<Cell icon="fa fa-qrcode" text="Scanning QR Code"></Cell>-->
+    <!--<Cell icon="fa fa-moon-o" text="Drafts"></Cell>-->
+    <!--<Cell icon="fa fa-hashtag" text="My Topics"></Cell>-->
+    <!--<Cell icon="fa fa-headphones" text="Help & Support"></Cell>-->
+    <!--</CellGroup>-->
+    <!--<Tabbar></Tabbar>-->
   </div>
 </template>
 
 <script>
+  import MHeader from './common/m-header'
+
   export default {
-    name: ""
+    name: "mine",
+    components:{
+      MHeader
+    }
   }
 </script>
 
 <style scoped>
   .avatar-wrapper {
     height: 90px;
-    margin-top: 10px;
     display: flex;
     padding: 15px;
     background-color: #fff;
@@ -48,10 +54,6 @@
     top: 45px;
     color: #bdbdbd;
   }
-
-  /*.avatar {*/
-  /*width:;*/
-  /*}*/
 
   .avatar img {
     width: 60px;
