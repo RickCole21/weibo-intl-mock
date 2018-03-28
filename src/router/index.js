@@ -5,7 +5,7 @@ import Login from '@/components/Login'
 import Weibo from '@/components/weibo'
 import Mine from '@/components/mine'
 
-import Dev from '@/components/common/weibo-item'
+import Dev from '@/plugins/toast/toast'
 
 Vue.use(Router);
 

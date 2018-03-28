@@ -1,5 +1,5 @@
 <template>
-  <div class="login-vue">
+  <div class="login">
     <nav class="reg-text">
       <router-link to="/foo">注册</router-link>
     </nav>
@@ -82,7 +82,7 @@
 </script>
 
 <style scoped>
-  .login-vue {
+  .login {
     position: relative;
     height: 100%;
     font-size: 1.6rem;

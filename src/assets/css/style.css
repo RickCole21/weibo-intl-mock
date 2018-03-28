@@ -15,7 +15,7 @@ a {
   text-decoration: none;
   color: #3c3c3c;
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);/* 去掉 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 去掉 */
 }
 
 input, button {
@@ -25,4 +25,9 @@ input, button {
 }
 
 #app {
+}
+
+#content {
+  position: relative;
+  top: 55px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="header-vue">
+  <div class="m-header">
     <div class="header-left">
       <img src="../../assets/img/avatar-me.jpg" alt="...">
     </div>
@@ -19,7 +19,7 @@
 </script>
 
 <style scoped>
-  .header-vue {
+  .m-header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -33,7 +33,7 @@
     z-index: 10;
   }
 
-  .header-vue::after {
+  .m-header::after {
     content: " ";
     position: absolute;
     left: 0;

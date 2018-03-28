@@ -1,68 +1,111 @@
 <template>
   <div>
-    <m-header title="全部"></m-header>
+    <m-header title="我的"></m-header>
 
-    <div class="avatar-wrapper">
+    <section id="content">
+
       <div class="avatar">
         <img src="../assets/img/avatar-me.jpg" alt="..."/>
-      </div>
-      <div class="avatar-info">
-        <h4>RickCole</h4>
-        <p>已消费：345.5$</p>
-      </div>
-    </div>
+        <div class="avatar-info">
+          <h4>{{name}}</h4>
+          <p>{{fans}}&nbsp粉丝</p>
+        </div>
 
-    <!--<CellGroup>-->
-    <!--<Cell icon="fa fa-cog" text="Settings"></Cell>-->
-    <!--</CellGroup>-->
+        <i class="fa fa-chevron-right"></i>
+      </div>
 
-    <!--<CellGroup>-->
-    <!--<Cell icon="fa fa-moon-o" text="Night Mode"></Cell>-->
-    <!--<Cell icon="fa fa-star-o" text="Favourites"></Cell>-->
-    <!--<Cell icon="fa fa-qrcode" text="Scanning QR Code"></Cell>-->
-    <!--<Cell icon="fa fa-moon-o" text="Drafts"></Cell>-->
-    <!--<Cell icon="fa fa-hashtag" text="My Topics"></Cell>-->
-    <!--<Cell icon="fa fa-headphones" text="Help & Support"></Cell>-->
-    <!--</CellGroup>-->
-    <!--<Tabbar></Tabbar>-->
+      <CellGroup>
+        <Cell icon="fa fa-cog" text="设置"></Cell>
+      </CellGroup>
+
+      <CellGroup>
+        <Cell icon="fa fa-moon-o" text="夜间模式"></Cell>
+        <Cell icon="fa fa-star-o" text="我的收藏"></Cell>
+        <Cell icon="fa fa-qrcode" text="扫一扫"></Cell>
+        <Cell icon="fa fa-moon-o" text="草稿箱"></Cell>
+        <Cell icon="fa fa-hashtag" text="关注的话题"></Cell>
+        <Cell icon="fa fa-headphones" text="客服中心" @click.native="foo"></Cell>
+      </CellGroup>
+
+      <CellGroup>
+        <Cell icon="fa fa-gift" text="每日福利"></Cell>
+      </CellGroup>
+    </section>
   </div>
 </template>
 
 <script>
   import MHeader from './common/m-header'
+  import CellGroup from './common/cell-group'
+  import Cell from './common/cell'
 
   export default {
     name: "mine",
-    components:{
-      MHeader
+    components: {
+      MHeader,
+      CellGroup,
+      Cell
+    },
+    data() {
+      return {
+        name: '',
+        fans: 0
+      }
+    },
+    methods: {
+      foo() {
+        this.$toast({
+          text: '测试文字',
+          time: 5000
+        });
+      }
+    },
+    created() {
+      var user = {
+        name: 'RickCole',
+        fans: 74
+      }
+
+      this.name = user.name;
+      this.fans = user.fans;
     }
   }
 </script>
 
 <style scoped>
-  .avatar-wrapper {
+  .avatar {
+    position: relative;
     height: 90px;
     display: flex;
     padding: 15px;
     background-color: #fff;
   }
 
-  .avatar-wrapper:after {
-    content: '>';
+  .avatar h4 {
+    font-size: 1.8rem;
+  }
+
+  .avatar i {
     position: absolute;
     right: 15px;
-    top: 45px;
+    top: 50%;
     color: #bdbdbd;
+    transform: translateY(-50%);
   }
 
   .avatar img {
     width: 60px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 50%;
   }
 
   .avatar-info {
     padding-left: 20px;
+    flex: 1;
+  }
+
+  .avatar-info h4, .avatar-info p {
+    line-height: 30px;
   }
 
 </style>

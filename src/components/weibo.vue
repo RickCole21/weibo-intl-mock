@@ -1,9 +1,15 @@
 <template>
-  <div class="weibo-vue">
+  <div class="weibo">
     <m-header title="全部"></m-header>
-    <div class="weibo-list">
-      <weibo-item v-for="weibo in weiboList" :key="weibo.id" :weibo="weibo"></weibo-item>
-    </div>
+
+    <section id="content">
+
+      <div class="weibo-list">
+        <weibo-item v-for="weibo in weiboList" :key="weibo.id" :weibo="weibo"></weibo-item>
+      </div>
+
+    </section>
+
   </div>
 </template>
 
@@ -31,9 +37,7 @@
 </script>
 
 <style scoped>
-  .weibo-list {
-    margin-top: 55px;
-  }
+
 </style>
 
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-bar-vue">
+  <div class="tab-bar">
     <slot></slot>
   </div>
 </template>
@@ -11,7 +11,7 @@
 </script>
 
 <style scoped>
-  .tab-bar-vue {
+  .tab-bar {
     display: table;
     height: 50px;
     width: 100%;
@@ -22,7 +22,7 @@
     background-color: #fff;
   }
 
-  .tab-bar-vue::before {
+  .tab-bar::before {
     content: " ";
     position: absolute;
     left: 0;
