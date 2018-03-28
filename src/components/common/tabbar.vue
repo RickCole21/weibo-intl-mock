@@ -13,9 +13,9 @@
 <style scoped>
   .tab-bar {
     display: table;
-    height: 50px;
+    height: 48px;
     width: 100%;
-    line-height: 50px;
+    line-height: 48px;
     position: fixed;
     bottom: 0;
     /*border-top: 1px solid #d9d9d9;*/

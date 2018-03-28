@@ -1,7 +1,9 @@
 <template>
-  <div class="toast" v-show="show">
-    <span class="toast-content" v-show="show">{{text}}</span>
-  </div>
+  <transition name="fade">
+    <div class="toast" v-if="show" @touchmove.prevent>
+      <span class="toast-content" v-if="show">{{text}}</span>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -14,7 +16,7 @@
       },
       time: {
         type: Number,
-        default: 1000
+        default: 1500
       },
     },
     data() {
@@ -57,6 +59,13 @@
     font-weight: bold;
     border-radius: 5px;
     max-width: 50%;
-    /* 渐变 */
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>

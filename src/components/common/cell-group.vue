@@ -12,7 +12,7 @@
 
 <style scoped>
   .cell-group {
-    margin-top: 10px;
+    margin-top: 27px;
     background-color: #fff;
   }
 </style>

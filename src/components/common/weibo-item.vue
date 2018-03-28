@@ -102,10 +102,11 @@
     color: #9c9c9c;
     padding-top: 2px;
     font-size: 1.2rem;
+    font-weight: 450;
   }
 
   .content .status small:last-child {
-    margin-left: 15px;
+    margin-left: 5px;
   }
 
   .more {

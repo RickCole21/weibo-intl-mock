@@ -34,7 +34,7 @@ var weiboList = [{
     src: avatar_me
   }],
   time: '6分钟前',
-  via: 'iphone客户端',
+  via: '微博 weibo.com',
   text: '有关小奥德尔-贝克汉姆（Odell Beckham Jr.）在纽约巨人未来的问题暂时还会持续发酵。' +
   '贝克汉姆的场外问题和交易流言现在成为人们谈论的话题，他的续约进展将会成为休赛期最值得关注' +
   '的发展。 NFL官网记者伊恩-拉波波特（Ian Rapoport）周一报道称小贝在签下长约前不会出场打球。' +

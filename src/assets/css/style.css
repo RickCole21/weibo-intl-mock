@@ -8,7 +8,7 @@ html, body {
 }
 
 html {
-  background-color: #f8f8f8;
+  background-color: #f1f1f1;
 }
 
 a {
@@ -30,4 +30,11 @@ input, button {
 #content {
   position: relative;
   top: 55px;
+}
+
+#content::after {
+  content: " ";
+  display: block;
+  height: 85px;
+  width: 100%;
 }

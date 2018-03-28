@@ -56,13 +56,13 @@
       foo() {
         this.$toast({
           text: '测试文字',
-          time: 5000
+          time: 2000
         });
       }
     },
     created() {
       var user = {
-        name: 'RickCole',
+        name: '任口口和口',
         fans: 74
       }
 
@@ -75,14 +75,10 @@
 <style scoped>
   .avatar {
     position: relative;
-    height: 90px;
+    height: 88px;
     display: flex;
     padding: 15px;
     background-color: #fff;
-  }
-
-  .avatar h4 {
-    font-size: 1.8rem;
   }
 
   .avatar i {
@@ -106,6 +102,16 @@
 
   .avatar-info h4, .avatar-info p {
     line-height: 30px;
+  }
+
+  .avatar-info h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .avatar-info p {
+    font-size: 1.3rem;
+    font-weight: 500;
   }
 
 </style>
