@@ -13,6 +13,8 @@
     props: ['icon', 'text', 'value', 'showArrow', 'link', 'textCenter'],
     methods: {
       onClick() {
+        if (!this.link) return;
+        
         this.$router.push(this.link);
       }
     }
