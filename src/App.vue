@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view/>
+    <transition>
+      <router-view/>
+    </transition>
 
     <tabbar>
       <tabbar-item to="/" icon="fa fa-home"></tabbar-item>
@@ -40,11 +42,6 @@
 </script>
 
 <style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #3c3c3c;
-    height: 100%;
-  }
+
+
 </style>
