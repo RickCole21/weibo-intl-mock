@@ -15,7 +15,7 @@
       </div>
 
       <CellGroup>
-        <Cell icon="fa fa-cog" text="设置"></Cell>
+        <Cell icon="fa fa-cog" text="设置" link="/settings"></Cell>
       </CellGroup>
 
       <CellGroup>
@@ -35,9 +35,7 @@
 </template>
 
 <script>
-  import MHeader from './common/m-header'
-  import CellGroup from './common/cell-group'
-  import Cell from './common/cell'
+  import {MHeader, CellGroup, Cell} from './common'
 
   export default {
     name: "mine",

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Login from '@/components/Login'
+import Login from '@/components/login'
 import Weibo from '@/components/weibo'
 import Mine from '@/components/mine'
+import Settings from '@/components/settings'
 
 import Dev from '@/components/study/emit/index'
 
@@ -34,6 +35,14 @@ export default new Router({
       component: Mine,
       meta: {
         title: '我的'
+      }
+    },
+    {
+      path: '/settings',
+      name: 'settings',
+      component: Settings,
+      meta: {
+        title: '设置'
       }
     },
     {

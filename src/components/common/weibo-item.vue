@@ -117,7 +117,7 @@
     position: absolute;
     right: 10px;
     top: 5px;
-    color: #9c9c9c;
+    color: #bdbdbd;
     font-size: 1.2rem;
   }
 

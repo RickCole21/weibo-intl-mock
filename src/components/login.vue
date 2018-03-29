@@ -47,7 +47,7 @@
 </template>
 
 <script>
-  import Divider from './common/divider'
+  import {Divider} from './common'
 
   export default {
     name: "login",
