@@ -12,7 +12,11 @@
 
 <style scoped>
   .cell-group {
-    margin-top: 27px;
+    margin-bottom: 27px;
     background-color: #fff;
+  }
+
+  .cell-group:last-child {
+    margin-bottom: 0;
   }
 </style>

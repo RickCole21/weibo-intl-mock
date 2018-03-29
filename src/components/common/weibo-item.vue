@@ -1,6 +1,5 @@
 <template>
   <div class="weibo-item">
-
     <header>
       <div class="avatar">
         <img :src="weibo.avatar" alt="...">

@@ -77,6 +77,7 @@
     display: flex;
     padding: 15px;
     background-color: #fff;
+    margin-bottom: 27px;
   }
 
   .avatar i {
