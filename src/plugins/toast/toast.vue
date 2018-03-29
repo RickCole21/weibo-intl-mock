@@ -12,7 +12,7 @@
     props: {
       text: {
         type: String,
-        default: '未知错误'
+        default: '请求超时'
       },
       time: {
         type: Number,
