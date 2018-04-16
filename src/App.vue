@@ -30,7 +30,7 @@
   Vue.use(Toast);
 
   /* ========== socket.io部分 ========== */
-  import io from 'socket.io'
+  // import io from 'socket.io'
 
   export default {
     name: 'App',
@@ -41,7 +41,7 @@
     created() {
     },
     mounted() {
-      var socket = io('http://localhost:4001');
+      // var socket = io('http://localhost:4001');
     }
   }
 </script>
