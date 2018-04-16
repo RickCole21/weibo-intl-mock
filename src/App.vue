@@ -23,12 +23,14 @@
   import Tabbar from './components/common/tabbar'
   import TabbarItem from './components/common/tabbar-item'
 
-  import Vue from 'vue'
   /* ========== 插件部分 ========== */
-
+  import Vue from 'vue'
   import Toast from './plugins/toast/index'
 
   Vue.use(Toast);
+
+  /* ========== socket.io部分 ========== */
+  import io from 'socket.io'
 
   export default {
     name: 'App',
@@ -37,6 +39,9 @@
       TabbarItem
     },
     created() {
+    },
+    mounted() {
+      var socket = io('http://localhost:4001');
     }
   }
 </script>
