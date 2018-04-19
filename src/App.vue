@@ -26,11 +26,13 @@
   /* ========== 插件部分 ========== */
   import Vue from 'vue'
   import Toast from './plugins/toast/index'
+  import Socket from './plugins/socket/index'
 
   Vue.use(Toast);
+  Vue.use(Socket);
 
   /* ========== socket.io部分 ========== */
-  import io from 'socket.io-client'
+  // import io from 'socket.io-client'
 
   export default {
     name: 'App',
@@ -41,7 +43,7 @@
     created() {
     },
     mounted() {
-      var socket = io('http://localhost:4001');
+      // var socket = io('http://localhost:4001');
     }
   }
 </script>

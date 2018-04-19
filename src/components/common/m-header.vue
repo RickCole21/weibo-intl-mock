@@ -6,7 +6,7 @@
     <span class="title">{{title}}</span>
     <div class="header-right">
       <i class="fa fa-search"></i>
-      <i class="fa fa-pencil"></i>
+      <i class="fa fa-pencil" @click="postWeibo"></i>
     </div>
   </div>
 </template>
@@ -14,7 +14,18 @@
 <script>
   export default {
     name: "m-header",
-    props: ['title']
+    props: ['title'],
+    methods: {
+      postWeibo() {
+        this.$socket.emit('post weibo', {
+          title: '小贝被交易至布朗'
+        });
+        console.log('发布了一条微博');
+      }
+    },
+    created() {
+      console.log(this.$socket);
+    }
   }
 </script>
 
