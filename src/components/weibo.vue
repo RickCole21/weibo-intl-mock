@@ -1,6 +1,19 @@
 <template>
   <div class="weibo">
-    <m-header title="全部"></m-header>
+    <m-header>
+      <div slot="header-left" class="icon">
+        <img src="../assets/img/avatar-me.jpg" alt="...">
+      </div>
+
+      <div slot="header-center">
+        <span class="title">全部</span>
+      </div>
+
+      <div slot="header-right">
+        <i class="fa fa-search" style="margin-right: 15px"></i>
+        <i class="fa fa-pencil" @click="postWeibo"></i>
+      </div>
+    </m-header>
 
     <section id="content">
 
@@ -30,6 +43,14 @@
         weiboList: []
       }
     },
+    methods: {
+      postWeibo() {
+        this.$socket.emit('post weibo', {
+          title: '小贝被交易至布朗'
+        });
+        console.log('发布了一条微博');
+      }
+    },
     created() {
       this.weiboList = weiboList;
     }
@@ -37,6 +58,21 @@
 </script>
 
 <style scoped>
+  .icon {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    left: 0;
+    height: 100%;
+  }
+
+  .icon img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
 
 </style>
 

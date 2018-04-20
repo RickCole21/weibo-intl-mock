@@ -1,30 +1,31 @@
 <template>
   <div class="m-header">
-    <div class="header-left">
-      <img src="../../assets/img/avatar-me.jpg" alt="...">
+
+    <div class="section header-left">
+      <!--<img src="../../assets/img/avatar-me.jpg" alt="...">-->
+      <slot name="header-left"></slot>
     </div>
-    <span class="title">{{title}}</span>
-    <div class="header-right">
-      <i class="fa fa-search"></i>
-      <i class="fa fa-pencil" @click="postWeibo"></i>
+
+    <div class="section header-center">
+      <!--<span class="title">{{title}}</span>-->
+      <slot name="header-center"></slot>
     </div>
+
+    <slot></slot>
+
+    <div class="section header-right">
+      <slot name="header-right"></slot>
+    </div>
+
   </div>
 </template>
 
 <script>
   export default {
     name: "m-header",
-    props: ['title'],
-    methods: {
-      postWeibo() {
-        this.$socket.emit('post weibo', {
-          title: '小贝被交易至布朗'
-        });
-        console.log('发布了一条微博');
-      }
-    },
+    props: {},
+    methods: {},
     created() {
-      console.log(this.$socket);
     }
   }
 </script>
@@ -36,7 +37,7 @@
     width: 100%;
     height: 45px;
     display: flex;
-    display: -webkit-flex;
+    align-items: center;
     line-height: 45px;
     font-size: 1.6rem;
     font-weight: bold;
@@ -57,32 +58,27 @@
     transform: scaleY(.5);
   }
 
+  .m-header i {
+    font-size: 2rem;
+  }
+
+  .m-header > .section {
+    height: 100%;
+    position: absolute;
+  }
+
   .header-left {
-    display: flex;
-    display: -webkit-flex;
-    justify-items: center;
-    align-items: center;
-    padding: 0 10px;
+    left: 10px;
   }
 
-  .header-left img {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-  }
-
-  .title {
-    flex: 1;
-    text-align: center;
+  .header-center {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .header-right {
-    display: inline-block;
-    right: 0;
+    right: 10px;
   }
 
-  .header-right i {
-    font-size: 2rem;
-    margin-right: 13px;
-  }
+
 </style>

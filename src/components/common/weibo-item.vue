@@ -21,7 +21,13 @@
     </main>
 
     <div class="media">
-      <img v-for="media in weibo.media" :src="media.src" alt="...">
+      <!-- 图片 -->
+      <div v-if="weibo.media.type === 'img'">
+        <img v-for="img in weibo.media.data" :src="img.src" alt="...">
+      </div>
+
+      <!-- 视频 -->
+      
     </div>
 
     <footer>

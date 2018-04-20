@@ -1,6 +1,19 @@
 <template>
   <div>
-    <m-header title="我的"></m-header>
+    <m-header>
+      <div slot="header-left">
+        <i class="fa fa-search"></i>
+      </div>
+
+      <div slot="header-center">
+        <span class="title">我的</span>
+      </div>
+
+      <div slot="header-right">
+        <i class="fa fa-search" style="margin-right: 15px"></i>
+        <i class="fa fa-pencil"></i>
+      </div>
+    </m-header>
 
     <section id="content">
 
