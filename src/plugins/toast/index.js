@@ -1,11 +1,12 @@
 import ToastComponent from './toast.vue'
+import {mergeOptions} from '../../libs/plugin-helper'
 
 let $vm;
 let watcher;
 
 const plugin = {
-  install(Vue, options = {}) {
-    const Toast = Vue.extend(ToastComponent);
+  install(vue, options = {}) {
+    const Toast = vue.extend(ToastComponent);
 
     if (!$vm) {
       $vm = new Toast({
@@ -14,16 +15,33 @@ const plugin = {
       document.body.appendChild($vm.$el);
     }
 
-    const defaults = {};
-    for (let i in $vm.$options.props) {
-      defaults[i] = $vm.$options.props[i].default;
+    const toast = (options = {}) => {
+
+      if (typeof options === 'string') {
+        $vm.text = options;
+      }
+
+      if (typeof options === 'object') {
+        mergeOptions($vm, options)
+      }
+
+      $vm.show = true;
+    };
+
+    // all wui's plugins are included in this.$wui
+    if (!vue.$wui) {
+      vue.$wui = {
+        toast
+      }
+    } else {
+      vue.$wui.toast = toast;
     }
 
-    Vue.prototype.$toast = function () {
-      console.log('toasted');
-      if ($vm.show) return;
-      $vm.show = true;
-    }
+    vue.mixin({
+      created: function () {
+        this.$wui = vue.$wui
+      }
+    })
 
   }
 };

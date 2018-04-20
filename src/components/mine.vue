@@ -52,9 +52,9 @@
     },
     methods: {
       foo() {
-        this.$toast({
+        this.$wui.toast({
           text: '测试文字',
-          time: 2000
+          fsdaf:'safs'
         });
       }
     },
