@@ -54,7 +54,6 @@
       foo() {
         this.$wui.toast({
           text: '测试文字',
-          fsdaf:'safs'
         });
       }
     },
